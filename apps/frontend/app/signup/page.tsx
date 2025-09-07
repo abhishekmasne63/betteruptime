@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Eye, EyeOff, ArrowLeft, Activity, Check } from 'lucide-react';
+import { Eye, EyeOff, Home, Activity, Check } from 'lucide-react';
 import { useRouter } from "next/navigation"; 
 import { BACKEND_URL } from '@/lib/utils';
 import axios from 'axios';
@@ -50,12 +50,15 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 flex">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 flex flex-col lg:flex-row">
       {/* Left side - Marketing content */}
-      <div className="w-1/2 p-12 text-white flex flex-col">
+      <div className="w-full lg:w-1/2 p-6 sm:p-8 lg:p-12 text-white flex flex-col">
         <div className="mb-8">
-          <button className="flex items-center text-white/80 hover:text-white transition-colors mb-8">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+          <button 
+            onClick={() => router.push("/")}
+            className="flex items-center text-white/80 hover:text-white transition-colors mb-8"
+          >
+            <Home className="w-4 h-4 mr-2" />
             Back to Home
           </button>
           
@@ -63,17 +66,17 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
               <Activity className="w-6 h-6" />
             </div>
-            <h1 className="text-2xl font-bold">UpGuard</h1>
+            <h1 className="text-2xl font-bold">BetterUptime</h1>
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col  max-w-lg">
+        <div className="flex-1 flex flex-col max-w-lg">
          
           
 
-          <h2 className="text-4xl font-bold mb-6">Join UpGuard today</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">Join BetterUptime today</h2>
           
-          <p className="text-white/80 text-lg mb-12 leading-relaxed">
+          <p className="text-white/80 text-base sm:text-lg mb-8 lg:mb-12 leading-relaxed">
             Start monitoring your infrastructure with confidence. Get instant alerts, 
             beautiful status pages, and comprehensive uptime monitoring.
           </p>
@@ -84,7 +87,7 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
                 <span className="text-sm font-bold">1</span>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">Quick Setup</h3>
+                <h3 className="font-semibold text-base sm:text-lg mb-1">Quick Setup</h3>
                 <p className="text-white/70">Get started with monitoring in under 5 minutes</p>
               </div>
             </div>
@@ -94,7 +97,7 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
                 <span className="text-sm font-bold">2</span>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">Free Trial</h3>
+                <h3 className="font-semibold text-base sm:text-lg mb-1">Free Trial</h3>
                 <p className="text-white/70">14-day free trial with no credit card required</p>
               </div>
             </div>
@@ -104,7 +107,7 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
                 <span className="text-sm font-bold">3</span>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1">Enterprise Ready</h3>
+                <h3 className="font-semibold text-base sm:text-lg mb-1">Enterprise Ready</h3>
                 <p className="text-white/70">Scales with your business from startup to enterprise</p>
               </div>
             </div>
@@ -117,10 +120,10 @@ const SignUp: React.FC<SignUpProps> = ({ onSwitchToSignIn }) => {
       </div>
 
       {/* Right side - Sign up form */}
-      <div className="w-1/2 bg-gray-900 flex items-center justify-center p-12">
+      <div className="w-full lg:w-1/2 bg-gray-900 flex items-center justify-center p-6 sm:p-8 lg:p-12">
         <div className="max-w-md w-full">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">Create your account</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Create your account</h2>
             <p className="text-gray-400">Start monitoring your infrastructure today</p>
           </div>
 

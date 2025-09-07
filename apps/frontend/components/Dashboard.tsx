@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from 'react';
-import { Globe, CheckCircle, XCircle, TrendingUp, Search, Filter, RefreshCw, Plus } from 'lucide-react';
+import { Globe, CheckCircle, XCircle, TrendingUp, Search, Filter, RefreshCw, Plus, LogOut } from 'lucide-react';
 import {Website, DashboardStats } from '@/types/types';
 import { WebsiteTable } from './WebsiteTable';
 import { StatsCards } from './StatsCard'; 
@@ -13,7 +13,11 @@ const mockWebsites: Website[] = [
   
 ];
 
-export function Dashboard() {
+interface DashboardProps {
+  onSignOut: () => void;
+}
+
+export function Dashboard({ onSignOut }: DashboardProps) {
   const [websites, setWebsites] = useState<Website[]>(mockWebsites);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'up' | 'down' | 'checking'>('all');
@@ -90,23 +94,19 @@ export function Dashboard() {
                 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Globe className="w-5 h-5" />
                 </div>
-                <h1 className="text-xl font-bold text-white">UpGuard</h1>
+                <h1 className="text-xl font-bold text-white">BetterUptime</h1>
               </div>
               <nav className="hidden md:flex space-x-6">
                 <a href="#" className="text-white font-medium px-3 py-2 rounded-md bg-slate-700">Dashboard</a>
-                <a href="#" className="text-slate-300 hover:text-white px-3 py-2 rounded-md hover:bg-slate-700">Status Pages</a>
-                <a href="#" className="text-slate-300 hover:text-white px-3 py-2 rounded-md hover:bg-slate-700">Reports</a>
               </nav>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="p-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">
-                <Search className="w-5 h-5" />
-              </button>
-              <button className="p-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">
-                <Globe className="w-5 h-5" />
-              </button>
-              <button className="px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-md">
-                Account
+              <button 
+                onClick={onSignOut}
+                className="flex items-center gap-2 px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
               </button>
             </div>
           </div>

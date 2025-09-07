@@ -1,7 +1,10 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { useRouter } from "next/navigation";
 
 const Pricing = () => {
+  const router = useRouter();
+
   const plans = [
     {
       name: 'Starter',
@@ -101,6 +104,7 @@ const Pricing = () => {
               </ul>
 
               <button 
+                onClick={() => router.push("/signup")}
                 className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center space-x-2 ${
                   plan.popular
                     ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl'

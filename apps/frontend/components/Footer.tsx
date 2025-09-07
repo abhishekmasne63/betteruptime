@@ -9,17 +9,22 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Monitor className="h-8 w-8 text-blue-400 dark:text-blue-300" />
-              <span className="text-xl font-bold">UptimeGuard</span>
+              <span className="text-xl font-bold">BetterUptime</span>
             </div>
             <p className="text-gray-400 dark:text-gray-300 mb-6 leading-relaxed">
               Monitor your websites 24/7 with our reliable uptime monitoring service. 
               Get instant alerts and detailed analytics.
             </p>
             <div className="flex space-x-4">
-              <Twitter className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
-              <Github className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
-              <Linkedin className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
-              <Mail className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
+              <a href="https://github.com/abhitry" target="_blank" rel="noopener noreferrer">
+                <Github className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/in/abhishek-masne-68b685232/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
+              </a>
+              <a href="mailto:abhishekmasne2015@gmail.com">
+                <Mail className="h-6 w-6 text-gray-400 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -59,7 +64,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 dark:text-gray-300 text-sm">
-            © 2025 UptimeGuard. All rights reserved.
+            © 2025 BetterUptime. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 dark:text-gray-300 hover:text-white text-sm transition-colors">Privacy Policy</a>

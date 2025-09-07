@@ -53,7 +53,7 @@ const Testimonials = () => {
                   `{testimonial.content}`
                 </p>
               </div>
-
+              BetterUptime has been instrumental in maintaining our 99.9% uptime. The alerts are fast and the dashboard is incredibly intuitive.
               <div className="flex items-center">
                 <img 
                   src={testimonial.avatar} 
